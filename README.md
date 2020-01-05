@@ -11,7 +11,18 @@ My main focus was on True Negatives(~>90%), since the problem statement was to f
 
 # Approach
 Observing all the images under labelImg app gave the idea that all the components places are fixed with very little variations. Additionally, have build the models only for missing parts which are missing in the data provided. Similarly, for rotated parts as well. For eg: compononent 1_a is present through out the data correctly, hence have not built missing or rotated models for this components.
-Then broke the problem down in three parts:
-1. Missing + Rotation
-2. Only Missing
-3. Only Rotation
+Then segregated the components in four parts:
+1. Missing + Rotation (eg: 20_f)
+2. Only Missing (eg: 3_b)
+3. Only Rotation(eg: 6_6)
+4. None (eg: 1_a)
+
+## Missing Approach
+
+## Rotation Apprach
+For the 16 components which were rotated in atleast one image, following was done -
+1. VGG16 classification model - Trained only the fc and sigmoid layer. From past experience, this model performs better with very few data
+2. Overfitted the data on this model - Since we wanted high TN
+3. Training samples
+  a. Train: correct: ~20 rotated:(as many there for a component, mostly 1/2)
+  b. Test: correct: 4 rotated:same as Train
