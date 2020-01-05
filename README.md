@@ -20,7 +20,7 @@ Then segregated the components in four parts:
 First of all, found the average position of each component on the pcb by averaging it's position across the data provided. Used these average positions to crop the region of interest and test for missing and rotation.
 
 ## Missing Approach
-Tried a bunch image comparison approaches structural similarity, hashing and mse. But since I was going for an average positioning these approaches gave huge margins for even slight changes in the image. Came back to basics, saw that the pcb will be green when a component is missing, so went ahead and just took a mean of RGB values and compared there difference with a reference image. This reference image has all the components correclty present. 
+Tried a bunch image comparison approaches structural similarity, hashing and mse. But since I was going for an average positioning these approaches gave huge margins for even slight changes in the image. Came back to basics, saw that the pcb will be green when a component is missing, so went ahead and just took a mean of RGB values and compared there difference with a reference image. This reference image had all the components correclty present. 
 
 ## Rotation Apprach
 For the 16 components which were rotated in atleast one image, following was done for each of th 16 components-
