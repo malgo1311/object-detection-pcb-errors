@@ -1,5 +1,5 @@
-## Download Models from Google drive here -
-## And add this folder to the 'inputs' folder
+#### Download Models from Google drive here -
+#### And add this folder to the 'inputs' folder
 
 # Usage:   
 ### Make sure you have the folder structure as it is in the github repo   
