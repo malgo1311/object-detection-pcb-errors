@@ -28,7 +28,6 @@ For the 16 components which were rotated in atleast one image, following was don
 2. Trained the data with Adam optimizer for a lr=0.00001
 3. Used Keras Image_Data_Generator for augmentation
 4. Overfitted the data on this model (Since we wanted high TN)
-5. Training samples
-  a. Train: correct:~18 ; rotated:(as many there are for a component, mostly 1/2)
-  b. Test: correct:~4 ; rotated:same as Train
-6. Saved the model with minimum val_loss
+5. Training samples: correct:~18 ; rotated:(as many there are for a component, mostly 1/2)
+6. Testing sample: correct:~4 ; rotated:same as Train
+7. Saved the model with minimum val_loss
