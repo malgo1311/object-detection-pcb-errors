@@ -22,7 +22,7 @@ First of all, found the average position of each component on the pcb by averagi
 ## Missing Approach
 Tried a bunch image comparison approaches structural similarity, hashing and mse. But since I was going for an average positioning these approaches gave huge margins for even slight changes in the image. Came back to basics, saw that the pcb will be green when a component is missing, so went ahead and just took a mean of RGB values and compared there difference with a reference image. This reference image had all the components correclty present. 
 
-## Rotation Apprach
+## Rotation Apprach (200105_rotation_classifier.ipynb)
 For the 16 components which were rotated in atleast one image, following was done for each of th 16 components-
 1. VGG16 classification model - Trained only the fc and sigmoid layer. From past experience, this model performs better with very few data so went for this straight away. Trained the data with Adam optimizer for a lr=0.00001. Used Keras Image_Data_Generator for augmentation
 2. Overfitted the data on this model (Since we wanted high TN)
